@@ -21,7 +21,7 @@ jobs:
     - uses: actions/upload-artifact@main
       with:
         name: webpack artifacts
-        path: public/
+        path: public
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -34,7 +34,7 @@ jobs:
     - uses: actions/download-artifact@main
       with:
         name: webpack artifacts
-        path: public/
+        path: public
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
